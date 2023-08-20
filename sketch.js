@@ -189,7 +189,7 @@ for(let key in skillNameTree){
 }
 
 let selectedNode = -1;
-let selectedDropdown = "What is CalisTree?";
+let selectedDropdown = "What is EvoSkillTree?";
 let branch = [];
 let confetti = [];
 let releaseConfetti = false;
@@ -275,7 +275,7 @@ function setup() {
     skillList[i].r = min(skillList[i].r*width/1991, skillList[i].r*height/1122);
   }
 
-  // nodeName = "CalisTree";
+  // nodeName = "EvoSkillTree";
   // t = text(";alksdjf;alksdf", 400, 400);
   // t.mousePressed(openLink);
   createCanvas(windowWidth, windowHeight);
@@ -351,7 +351,7 @@ function mousePressed(){
     if(inCircle(mouseX, mouseY, skillList[i].x, skillList[i].y, skillList[i].r)){
       if(selectedNode == i){
         selectedNode = -1;
-        selectedDropdown = "What is CalisTree?";
+        selectedDropdown = "What is EvoSkillTree?";
       }
       else{
         selectedNode = i;
@@ -439,11 +439,11 @@ function draw() {
     textSize(titleFontSize);
     textAlign(LEFT, TOP);
     fill('#FFFFFF');
-    text("CalisTree", width-leftHeading, titleTop);
+    text("EvoSkillTree", width-leftHeading, titleTop);
     pop();
 
     if(selectedNode == -1){
-      nodeName = "CalisTree";
+      nodeName = "EvoSkillTree";
     }
     else{
       nodeName = skillList[selectedNode].name;
@@ -632,7 +632,7 @@ function draw() {
       fill('#FFFFFF');
       if(skillList[selectedNode].locked == true){
         if (selectedNode == 0) {
-          text("Start CalisTree", width-completeButtonX, height-completeButtonY);
+          text("Start EvoSkillTree", width-completeButtonX, height-completeButtonY);
         }
         else if(selectedNode <= 3 || skillList[selectedNode].name == "Basic Handstand Shapes" || skillList[selectedNode].name == "Advanced Handstand Shapes"){
           text("Start Category", width-completeButtonX, height-completeButtonY);
